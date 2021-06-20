@@ -1,0 +1,122 @@
+.features {
+    position: relative;
+    filter: none;
+    // filter: blur(3px);
+
+    // backdrop-filter: blur(3px);
+
+    &.blur {
+        filter:blur(3px);
+
+        overflow: hidden;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: url("../assets/tesla-model3.jpeg");
+
+        pointer-events: none;
+        
+    }
+
+    // z-index: -1;
+    & section {
+        height: 100vh;
+        scroll-snap-align: start;
+
+        z-index: -10;
+        position: relative;
+
+        &:nth-of-type(1) {
+            background: url("../assets/tesla-model3.jpeg");
+            background-size: cover;
+            background-position-y: -230px;
+        }
+        &:nth-of-type(2) {
+            background: url("../assets/tesla-solarpowerwall.jpeg");
+            background-size: cover;
+            background-position-y: -230px;
+        }
+        &:nth-of-type(3) {
+            background: url("../assets/tesla-modelY.jpeg");
+            background-size: cover;
+            background-position-y: -230px;
+
+        }
+        &:nth-of-type(4) {
+            background: url("../assets/tesla-modelS.jpeg");
+            background-size: cover;
+        }
+        &:nth-of-type(5) {
+            background: url("../assets/tesla-modelX.jpeg");
+            background-size: cover;
+        }
+
+    }
+
+    & .overlay {
+        // position:relative;
+        // background-color: green;
+        // z-index: 30;
+        position: fixed;
+        // width: 80%;
+        // height: 80vh;
+
+        right:0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        & .overlay__text {
+            // position: relative;
+            // z-index: 20;
+            margin-top: -180px;
+            & h1 {
+                font-size: 40px;
+                font-weight: 800;
+                color: rgba($color: black, $alpha: 0.7);
+            }
+
+            & p {
+                color: rgba($color: black, $alpha: 0.7);
+                font-size: 15px;
+                font-weight:600;
+
+                & a {
+                    color: inherit;
+                    text-decoration: none;
+
+                    border-bottom: 2px solid black;
+                    text-shadow:rgba($color: black, $alpha: 0.7);
+
+                    transition: 0.1s;
+
+                    &:hover {
+                        border-bottom-width: 3px;
+
+                    }
+                }
+            }
+        }
+
+        & .overlay__buttons {
+            position: relative;
+
+            & button {
+                margin-left: 15px;
+                margin-right: 15px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            margin-bottom: -220px;
+
+        }
+    }
+}

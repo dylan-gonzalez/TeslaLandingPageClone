@@ -1,0 +1,32 @@
+.custom-btn {
+    position: relative;
+
+    border: none;
+
+    width: 290px;
+    height: 40px;
+
+    border-radius: 30px/30px;
+
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.8;
+
+    text-transform: uppercase;
+
+    // background-color: red;
+
+    &.black {
+        background-color: black;
+        color: white;
+        font-weight: 800;
+    }
+
+    &.white {
+        background-color: white;
+        color: black;
+        font-weight: 800;
+    }
+}
